@@ -1,10 +1,11 @@
 spring:
   datasource:
-    url: jdbc:postgresql://db:5432/currency_db
+    url: jdbc:postgresql://db:5432/currencies
     username: postgres
     password: postgres
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
   liquibase:
+    enabled: true
     change-log: classpath:/db/changelog/changelog-master.xml

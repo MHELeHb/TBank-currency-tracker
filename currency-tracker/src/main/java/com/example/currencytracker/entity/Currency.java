@@ -1,11 +1,12 @@
 package com.example.currencytracker.entity;
 
+
 public class Currency {
     private Long id;
     private String name;
     private String description;
-    private String priceChangeRange;
     private String baseCurrency;
+    private String priceChangeRange;
 
     public String getName() {
         return name;
@@ -37,5 +38,9 @@ public class Currency {
 
     public void setBaseCurrency(String baseCurrency) {
         this.baseCurrency = baseCurrency;
+    }
+
+    public Long getId() {
+        return id;
     }
 }

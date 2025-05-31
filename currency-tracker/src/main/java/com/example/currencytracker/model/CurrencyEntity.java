@@ -16,8 +16,10 @@ public class CurrencyEntity {
 
     private String name;
 
+    @Column(name = "base_currency")
     private String baseCurrency;
 
+    @Column(name = "price_change_range")
     private String priceChangeRange;
 
     private String description;

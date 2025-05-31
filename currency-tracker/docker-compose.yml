@@ -3,9 +3,9 @@ services:
     image: postgres:15
     container_name: postgres-db
     environment:
-      POSTGRES_DB: your_db
-      POSTGRES_USER: your_username
-      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: currencies
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
 
@@ -14,6 +14,6 @@ services:
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/your_db
-      SPRING_DATASOURCE_USERNAME: your_username
-      SPRING_DATASOURCE_PASSWORD: your_password
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/currencies
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
