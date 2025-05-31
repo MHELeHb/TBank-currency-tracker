@@ -1,13 +1,13 @@
 package com.example.currencytracker.dto;
 
 public class CurrencyRequest {
-    private Long id;
+    private String id;
     private String name;
     private String baseCurrency;
     private String priceChangeRange;
     private String description;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 

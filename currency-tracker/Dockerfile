@@ -1,3 +1,3 @@
 FROM openjdk:17-jdk-slim
-COPY target/currency-tracker.jar app.jar
+COPY target/currency-tracker-1.0.0.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]

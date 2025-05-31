@@ -1,8 +1,14 @@
 package com.example.currencytracker.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "currencies")
 public class Currency {
-    private Long id;
+    @Id
+    private String id;
     private String name;
     private String description;
     private String baseCurrency;
@@ -32,15 +38,19 @@ public class Currency {
         this.priceChangeRange = priceChangeRange;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public void setBaseCurrency(String baseCurrency) {
         this.baseCurrency = baseCurrency;
     }
 
-    public Long getId() {
+    public String getBaseCurrency() {
+        return baseCurrency;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
         return id;
     }
 }

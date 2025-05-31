@@ -4,8 +4,10 @@
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
     <changeSet id="1" author="dev">
+        <validCheckSum>9:a41b65ad7ded304da12c9d94050aa4a4</validCheckSum>
+
         <createTable tableName="currencies">
-            <column name="id" type="bigint">
+            <column name="id" type="varchar(255)">
                 <constraints primaryKey="true"/>
             </column>
             <column name="name" type="varchar(255)"/>
